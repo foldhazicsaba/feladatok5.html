@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="szoveg"></p>
+<button onclick="kiir()">Adatok kiíratása</button>
+
+<script>
+	const kisskati = {
+   		teljesnev: "Kiss Katalin",
+   		eletkor: 28,
+   		hobby: "futás",
+        osszesAdat: function() {
+            return "Teljesnév: " + kisskati.teljesnev + ", életkor: " + kisskati["eletkor"] + ", hobby: " + kisskati["hobby"] ;
+        }
+	};
+
+	function kiir() {
+		document.getElementById("szoveg").innerHTML = kisskati.osszesAdat();
+	}
+</script>
+    
+</body>
+</html>
